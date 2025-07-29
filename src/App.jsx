@@ -10,7 +10,7 @@ import EditProductPage from './pages/EditProductPage';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/FakeStore/">
       <NavbarComponent />
       <Layout>
         <Routes>
@@ -19,6 +19,7 @@ function App() {
           <Route path="/products/:id" element={<ProductDetailsPage />} />
           <Route path="/add-product" element={<AddProductPage />} />
           <Route path="/edit-product/:id" element={<EditProductPage />} />
+          <Route path="*" element={<HomePage />} />
         </Routes>
       </Layout>
     </Router>
